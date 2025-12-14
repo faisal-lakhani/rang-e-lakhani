@@ -11,5 +11,5 @@
     white-space: nowrap;
 }
 .card{flex: 0 0 auto;
-min-width: 18rem;}
+min-width: 50%; max-width;}
 .card-img-top{width: 100%; height: 250px; object-fit: cover;}
