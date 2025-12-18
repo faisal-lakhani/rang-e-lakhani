@@ -1,26 +1,26 @@
-.navbar-brand { width: 100%; max-width: 200px; height: auto;gap: }
+.navbar-brand { width: 100%; max-width: 200px; height: auto;gap:2px; }
 .navbar-nav{margin-left: 35%; gap: 20px;}
-.card{padding: 5px; margin: top 5px; border: none;}
+/* .card{padding: 5px; margin: top 5px; border: none;}
 
 .card-header ul{ justify-content: center; column-gap: 40px;}
 .scroll.row{
     overflow-x: auto;
     overflow-y: hidden;
     white-space: nowrap;
-}
+} */
 
 
-.card-img-top{width: 100%; height: 300px; object-fit: cover;}
-.scroll-card {height: 100%;}
+ .card-img-top{width: 100%; height: 300px; object-fit: cover;}
+/*.scroll-card {height: 100%;}
 .scroll-row{
   width: 100%;
-}
-@media (min-width: 992px){
+} */
+/* @media (min-width: 992px){
 .scroll-row .card{
   flex: 0 0 25%;
   width: 25%;
   flex-shrink: 0;  
-}}
+}} */
 .card-body .btn {margin-top: auto;}
 .card-text {font-size: 14px; line-height: 1.3;}
 .rating i{
@@ -48,7 +48,7 @@
 
 
 
-@media (max-width: 992px){
+/* @media (max-width: 992px){
   .card{
     flex: 0 0 calc(50% - 12px); 
   }
@@ -57,5 +57,57 @@
 @media (max-width: 576px){
   .card{
     flex: 0 0 85%; 
+  }
+} */
+
+
+
+/* cards row */
+.carousel-item > div {
+  gap: 12px;
+}
+
+/* desktop: 4 cards visible */
+.product-card {
+  flex: 0 0 25%;
+}
+
+/* mobile: 1 card visible */
+@media (max-width: 767px) {
+  .product-card {
+    flex: 0 0 100%;
+  }
+}
+
+/* image sizing */
+.product-img {
+  height: 160px;
+  object-fit: cover;
+}
+
+
+
+.card-wrapper {
+  display: flex;
+  flex-wrap: nowrap;      /* ek hi row */
+  overflow-x: auto;       /* horizontal scroll */
+  gap: 12px;
+  -webkit-overflow-scrolling: touch; /* smooth mobile scroll */
+}
+
+.card-wrapper .card {
+  min-width: 250px;       /* scroll ke liye zaroori */
+  flex-shrink: 0;
+}
+
+
+
+/* Desktop */
+@media (min-width: 992px) {
+  .card-wrapper {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr); /* 5 cards per row */
+    gap: 12px;
+    overflow-x: hidden;
   }
 }
